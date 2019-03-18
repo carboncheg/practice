@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+    <script>
+        let login = prompt('Введите логин', 'qwerty'),
+            pass = prompt('Введите пароль', 12345);
+        if (login == 'ivan' && pass == 334455 
+            || login == 'alex' && pass == 777 
+            || login == 'petr' && pass == 'b5678') {
+                alert('Добро пожаловать!')
+        }
+        else {
+            alert(`Ошибка входа`)
+        }
+    </script>
+</body>
+</html>

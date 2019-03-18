@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BIGGER number</title>
+</head>
+<body>
+    <script>
+        let num1 = prompt('Введите первое число', 1),
+            num2 = prompt('Введите второе число', 2);
+        if (num1 < num2) {
+            alert(`Число ${num2} большее из двух введённых`)
+        }
+        else if (num2 < num1) {
+            alert(`Число ${num1} большее из двух введённых`)
+        }
+        else {
+            alert(`Вы ввели 2 одинаковых числа`);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Surcharge</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #000;
+            background: #ccc;
+            width: 316px;
+        }
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            height: 30px;
+        }
+        h4 {
+            margin: 0;
+            font: 500 18px sans-serif;
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        input {
+            margin-right: 8px;
+            width: 30px;
+            font: 500 18px sans-serif;
+        }
+        button {
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            font: 400 16px sans-serif;
+            margin-left: 30px;
+        }
+        p {
+            font: 500 18px sans-serif;
+            margin-top: 0;
+        }
+        #screen {
+            border: 2px solid #000;
+            background: #fff;
+            width: 100px;
+            height: 40px;
+            margin-bottom: 25px;
+            font: 700 20px sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="inner">
+        <div class="wrapper">
+            <h4>Стаж</h4>
+            <input type="text" id="experience">
+            <h4>лет</h4>
+            <button>Расчитать</button>
+        </div>
+        <p>Ваша надбавка составляет:</p>
+        <div id="screen"></div>
+    </div>
+    <script>
+        let experience = document.getElementById('experience'),
+            years = document.getElementsByClassName('years'),
+            calc = document.querySelector('button'),
+            screen = document.querySelector('#screen');
+
+        calc.addEventListener('click', function() {
+
+            if (experience.value >= 0 && experience.value < 3) {
+                screen.textContent = '0%'
+            }
+            else if (experience.value >= 3 && experience.value < 10) {
+                screen.textContent = '10%'
+            }
+            else if (experience.value >= 10 && experience.value < 20) {
+                screen.textContent = '20%'
+            }
+            else if (experience.value >= 20 && experience.value < 100) {
+                screen.textContent = '25%'
+            }
+            else if (experience.value >= 100) {
+                alert('Oй! Что-то вы преувеличиваете =)')
+            }
+            else {
+                screen.textContent = 'Error!'
+            }
+
+            if (screen.textContent == 'Error!') {
+                screen.style.color = 'red';
+            }
+            else {
+                screen.style.color = 'cadetblue';
+            }
+        });
+
+
+        // let box = document.createElement('div'),
+        //     text = document.createTextNode('BOX');
+        //     box.appendChild(text);
+
+        //     box.style.width = '50px';
+        //     box.style.height = '50px';
+        //     box.style.background = '#fff';
+
+        // let p = document.querySelector('p'),
+        //     inner = p.parentNode;
+        //     inner.insertBefore(box, p);
+
+        // // inner.removeChild(box);
+
+        // box.remove();
+
+        // let screen2 = screen.cloneNode(true);
+        //     inner.insertBefore(screen2, screen);
+
+        // inner.replaceChild(screen, screen2);
+
+
+    </script>
+</body>
+</html>

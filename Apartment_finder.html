@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apartment finder</title>
+</head>
+<body>
+    <script>
+        // let apartNum;
+        // do {
+        //     apartNum = prompt('Введите номер квартиры', 1);
+        // }
+        // while (isNaN(parseInt(apartNum)));
+
+        // if (apartNum >= 1 && apartNum <= 20) {
+        //     alert(`Квартира ${apartNum} находится в подъезде №1`)
+        // }
+        // else if (apartNum >= 21 && apartNum <= 48) {
+        //     alert(`Квартира ${apartNum} находится в подъезде №2`)
+        // }
+        // else if (apartNum >= 49 && apartNum <= 90) {
+        //     alert(`Квартира ${apartNum} находится в подъезде №3`)
+        // }
+        // else if (apartNum == null) {
+        //     alert(`Вы не ввели номер квартиры`)
+        // }
+        // else {
+        //     alert(`Квартиры с таким номером с этом доме не существует`)
+        // }
+
+
+        let apartNum;
+
+        while (isNaN(parseInt(apartNum))) {
+            apartNum = prompt('Введите номер квартиры', 1)
+        }
+        
+        if (apartNum >= 1 && apartNum <= 20) {
+            alert(`Квартира ${apartNum} находится в подъезде №1`)
+        }
+        else if (apartNum >= 21 && apartNum <= 48) {
+            alert(`Квартира ${apartNum} находится в подъезде №2`)
+        }
+        else if (apartNum >= 49 && apartNum <= 90) {
+            alert(`Квартира ${apartNum} находится в подъезде №3`)
+        }
+        else if (apartNum == null) {
+            alert(`Вы не ввели номер квартиры`)
+        }
+        else {
+            alert(`Квартиры с таким номером с этом доме не существует`)
+        }
+    </script>
+</body>
+</html>
